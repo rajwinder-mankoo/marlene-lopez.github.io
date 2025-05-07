@@ -255,6 +255,36 @@
 .booking-button:hover {
   background-color: #005bb5;
 }
+
+.thank-you {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.thank-you h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #5f9ea0;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4a8586;
+}
+
   /* Footer */
   .footer {
     text-align: center;

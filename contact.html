@@ -24,11 +24,11 @@
 
     <div class="contact-info">
       <p><strong>Serving:</strong> Cedar City & St. George, Utah</p>
-      <p><strong>Email:</strong> yourfriend@email.com</p>
+      <p><strong>Email:</strong> marlene.lopez.lmt@gmail.com</p>
       <p><strong>Phone:</strong> (123) 456-7890</p>
     </div>
 
-    <form class="contact-form" action="php/send.php" method="POST">
+    <form class="contact-form">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
 
@@ -41,8 +41,26 @@
       <button type="submit">Send Message</button>
     </form>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+      })();
+
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => {
+        alert("Message sent successfully!");
+        this.reset();
+      }, (error) => {
+        alert("Failed to send message: " + JSON.stringify(error));
+      });
+      });
+</script>
+
     <div class="booking-buttons">
-      <a href="https://www.vagaro.com/" class="booking-button" target="_blank">Book via Vagaro</a>
+      <a href="https://www.vagaro.com/cedarcityskinclinicspa" class="booking-button" target="_blank">Book via Vagaro</a>
       <a href="https://www.booksy.com/" class="booking-button" target="_blank">Book via Booksy</a>
     </div>
   </main>
