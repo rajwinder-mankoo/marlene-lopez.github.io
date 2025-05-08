@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Licensed massage therapist and esthetician offering massage, facials, and cupping therapy in Cedar City & St. George, Utah. Book now for relaxation and healing.">
   <title>Marlene Wellness Massage & Spa</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body background="images/background.jpeg">
-  <header class="header">
+<body>
+  <header class="sticky" id="header">
     <div class="container">
-      <h1 class="logo">Marlene Wellness Massage & Spa</h1>
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="Logo">
+    </div>
+    <a class="navbar-brand" href="index.html"> Marlene Wellness Massage & Spa</a>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -20,7 +24,8 @@
   </header>
 
   <section class="hero">
-    <div class="container">
+    <div class="container" style="text-align: center;">
+      <img src="images/hero-bg.jpeg" alt="banner">
       <h2>Relax. Rejuvenate. Restore.</h2>
       <p>Professional Massage Therapy and Skincare Services in Cedar City & St. George.</p>
       <div class="buttons">
@@ -31,11 +36,40 @@
   </section>
 
   <section class="intro">
-    <div class="container">
-      <h3>Welcome</h3>
-      <img src="images/profile.jpg" alt="profile-picture">
-      <p>Marlene Lopez is a passionate and skilled massage therapist dedicated to healing, relaxation, and overall well-being. With a caring touch and an intuitive approach, she creates a personalized experience that restores balance and relieves stress. Whether you need deep tissue work, gentle relaxation, or energy alignment, Marlene is committed to helping you feel your best—body, mind, and spirit. Book your session today and experience the power of therapeutic connection!</p>
+    <img src="images/profile.jpg" alt="Portrait of Marlene Lopez, licensed massage therapist and esthetician">
+    <p>Marlene Lopez is a passionate and skilled massage therapist dedicated to healing, relaxation, and overall well-being. With a caring touch and an intuitive approach, she creates a personalized experience that restores balance and relieves stress. Whether you need deep tissue work, gentle relaxation, or energy alignment, Marlene is committed to helping you feel your best—body, mind, and spirit. Book your session today and experience the power of therapeutic connection!</p>
+  </section>
+
+  <section class="featured-services">
+    <h2 style="text-align:center; color:#007b7f;">Featured Services</h2>
+    <div class="featured-grid">
+      <div class="feature-card">
+        <img src="images/swedish-massage.jpeg" alt="Hand pressing on back to represent massage therapy">
+        <h3>Massage Therapy</h3>
+        <p>Relax tight muscles, improve circulation, and relieve stress with our therapeutic massage offerings.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/icon-skincare.png" alt="Facial mask and leaves representing esthetic skincare">
+        <h3>Esthetic Services</h3>
+        <p>Reveal radiant skin with facials, waxing, and gentle exfoliation tailored to your unique skin type.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/lymphatic.jpeg" alt="Cupping jar representing cupping therapy">
+        <h3>Cupping Therapy</h3>
+        <p>Boost circulation, reduce muscle tension, and promote healing through this ancient therapy.</p>
+      </div>
     </div>
+  </section>
+
+  <section class="testimonial-preview">
+    <blockquote>“Marlene is excellent. I went in with lower back pain. I was floating when I left and the pain is gone. Her touch is great and she was professional. I booked another appointment when I was done...”</blockquote>
+    <cite>– Barry Gloster</cite>
+      <a href="testimonials.html" style="align-items: center;">Read More Testimonials</a>
+  </section>
+
+  <section class="callout">
+    <h3>Ready to relax and recharge?</h3>
+    <a href="services.html">Explore All Services</a>
   </section>
 
   <footer class="footer">
@@ -47,6 +81,3 @@
   </footer>
 </body>
 </html>
-
-
-<!--https://deeptissuehealing.com/-->
