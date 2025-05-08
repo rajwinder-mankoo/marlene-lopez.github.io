@@ -11,7 +11,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    /*background-color: #f9f9f9;*/
+    background-color: #f9f9f9;
   }
   
   .container {
@@ -127,24 +127,80 @@
     margin-bottom: 2rem;
   }
   
-  /* Service Card */
+  /* Flip Card Container */
   .service-card {
-    background: #fff;
-    padding: 1.2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
+    perspective: 1000px;
+    height: 480px; /* Fixed height for flip functionality */
+    position: relative;
   }
   
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
   }
   
-  .service-card p {
+  .service-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 1em;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-front {
+    z-index: 2;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image */
+  .service-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text */
+  .duration-price {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
     color: #555;
-    font-size: 1rem;
+    margin: 0.5rem 0;
   }
+  
+  .card-back p {
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+    margin: 0.3rem 0;
+  }
+  
+  
 
   /* Testimonials Page */
 
